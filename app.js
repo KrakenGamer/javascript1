@@ -1,8 +1,13 @@
-var press = function() {
-	alert("What the heck is a sonic!? PINGAS CHIPS ARE nice! (this is my first project so sorry if it is low quality)");
-};
+var Score=0;
 
-var ask = function() {
-	var name= prompt("What the heck is a sonic!?");
-	alert("Pingas" + name + "Pingas");
+var highscore=0;
+
+var press= function() {
+	Score++;
+	document.getElementById('Score').innerHTML = "Your awesome score" +Score;
+	if (Score > highscore) {
+		document.getElementById('highscore').innerHTML = "New Highscore" + Score;
+		return;
+
+	}
 };
