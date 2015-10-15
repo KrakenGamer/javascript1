@@ -1,5 +1,5 @@
 var gamebutton = function(){
-	document.getElementById('button').innerHTML = '<input onclick="press()" type="image" id="button" src="Untitled.png">'
+	document.getElementById('button').innerHTML = '<input onclick="press()" type="image" id="button" src="button.png">'
 } 
 
 
@@ -12,10 +12,8 @@ var press = function() {
 	document.getElementById('Score').innerHTML = "Your awesome score: " + Score;
 	if (Score === 21){
 		alert("Press the button as much as you can. If you don't then coolernow will come after you.");
+		document.getElementById('button').innerHTML = '<input onclick="press()" type="image" id="button" src="bonus.png">'
 		setInterval(gameover, 5000);
-		script>
-
-    
 	}
 	else if (Score > highscore) {
 		document.getElementById('highscore').innerHTML = "New Highscore " + Score;
