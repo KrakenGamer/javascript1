@@ -1,26 +1,4 @@
-var gamebutton = function(){
-	document.getElementById('button').innerHTML = '<input onclick="press()" type="image" id="button" src="button.png">'
-} 
-
-
-var Score=0;
-
-var highscore=19;
-
-var press = function() {
-	Score++;
-	document.getElementById('Score').innerHTML = "Your awesome score: " + Score;
-	if (Score === 21){
-		alert("Press the button as much as you can. If you don't then coolernow will come after you.");
-		document.getElementById('button').innerHTML = '<input onclick="press()" type="image" id="button" src="bonus.png">'
-		setInterval(gameover, 5000);
-	}
-	else if (Score > highscore) {
-		document.getElementById('highscore').innerHTML = "New Highscore " + Score;
-		return;
-	}
-};
-
-function gameover() {
-	document.getElementById('button').innerHTML = '';
-}
+var yomama = new Array("Yo Mama so short, she can hang glide on doritos, Yo Mama so fat when you kill her in Call of Duty you get a 5 killstreak, Yo Mama so short she can't even get high, Yo Mama so fat when she goes into sace there is no space,")
+// this is a yo mama joke compilation //
+var select = [Math.floor(Math.random() * 3)];
+document.getElementById("cookie").innerHTML = yomama[thing];
